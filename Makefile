@@ -8,8 +8,8 @@ build:
 	docker build --tag=${user}/${repository}:${version} .
 
 deploy:
-	if [ ! -z "$(shell docker ps --filter name=test-mysql -q)" ]; then \
-		docker stop test-mysql && docker rm test-mysql; \
+	if [ ! -z "$(shell docker ps --filter name=go-build-env -q)" ]; then \
+		docker stop go-build-env  && docker rm go-build-env; \
 	fi
 	docker run --name go-build-env --network testnet -d hatlonely/${repository}:${version} tail -f /dev/null; \
 

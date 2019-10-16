@@ -16,6 +16,7 @@ RUN pip3 install behave
 RUN pip3 install pyhamcrest
 RUN pip3 install pymysql
 RUN pip3 install cryptography
+RUN pip3 install grpcio grpcio-tools
 
 # grpc support
 RUN yum install -y unzip

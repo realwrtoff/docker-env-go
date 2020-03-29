@@ -2,10 +2,6 @@ FROM centos:centos7
 
 RUN yum install -y kde-l10n-Chinese && yum reinstall -y glibc-common && localedef -c -f UTF-8 -i zh_CN zh_CN.utf8
 
-ENV LANG=zh_CN.UTF-8
-ENV LANGUAGE=zh_CN:zh
-ENV LC_ALL=zh_CN.UTF-8
-
 RUN yum install -y epel-release
 RUN yum install -y docker-io
 RUN yum install -y make
@@ -45,4 +41,3 @@ RUN mkdir -p /src/google.golang.org/grpc && \
 
 RUN yum install -y git
 RUN yum install -y gcc
-RUN echo "LC_ALL=\"zh_CN.UTF-8\"" > /etc/locale.conf

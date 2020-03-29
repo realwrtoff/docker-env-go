@@ -42,3 +42,5 @@ RUN mkdir -p /src/google.golang.org/grpc && \
     export GO111MODULE=on && \
     go get -u google.golang.org/grpc && \
     go get -u github.com/golang/protobuf/protoc-gen-go
+
+RUN yum install -y git

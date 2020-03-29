@@ -45,3 +45,4 @@ RUN mkdir -p /src/google.golang.org/grpc && \
 
 RUN yum install -y git
 RUN yum install -y gcc
+RUN echo "LC_ALL=\"zh_CN.UTF-8\"" > /etc/locale.conf

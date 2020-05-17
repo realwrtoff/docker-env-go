@@ -8,16 +8,16 @@ RUN yum install -y make
 
 # behave support
 RUN yum install -y python36 python36-setuptools python36-pip
-RUN pip3 install --upgrade pip
-RUN pip3 install requests
-RUN pip3 install flask
-RUN pip3 install redis
-RUN pip3 install pymongo
-RUN pip3 install behave
-RUN pip3 install pyhamcrest
-RUN pip3 install pymysql
-RUN pip3 install cryptography
-RUN pip3 install grpcio grpcio-tools
+RUN pip3 install --upgrade pip -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install requests -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install flask -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install redis -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install pymongo -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install behave -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install pyhamcrest -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install pymysql -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install cryptography -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN pip3 install grpcio grpcio-tools -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 
 # golang
 ENV GOPROXY=https://goproxy.io
